@@ -20,5 +20,7 @@ document.querySelector('#app').innerHTML = `
     </p>
   </div>
 `
-
+document.getElementById('spin-recipe-btn').addEventListener('click', () => {
+  // spinning logic here
+})
 setupCounter(document.querySelector('#counter'))
