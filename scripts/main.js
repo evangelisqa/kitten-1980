@@ -177,7 +177,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     const resultsContainer = document.getElementById("results");
     resultsContainer.innerHTML = "";
 
-    const recipes = await searchRecipesByIngredients(query, diet, cuisine, maxTime);
+    const spoonacularKey = import.meta.env.VITE_SPOONACULAR_KEY;
+    const recipes = await searchRecipesByIngredients(spoonacularKey, query, diet, cuisine, maxTime);
     const container = document.createElement("div");
     container.id = "spoonacular-results";
     container.innerHTML = `<h2>Top Recipe Results (Spoonacular):</h2>`;

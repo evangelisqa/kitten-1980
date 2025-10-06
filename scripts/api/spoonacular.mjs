@@ -1,8 +1,9 @@
 const API_KEY = import.meta.env.VITE_SPOONACULAR_KEY;
 
-export async function searchRecipesByIngredients(ingredients, diet, cuisine, maxTime) {
+export async function searchRecipesByIngredients(apiKey, query, diet, cuisine, maxTime) {
+  console.log("Received Spoonacular key:", apiKey);
   const params = new URLSearchParams({
-    includeIngredients: ingredients,
+    includeIngredients: query,
     number: 5,
     apiKey: API_KEY
   });
@@ -57,3 +58,4 @@ export async function getSpoonacularRecipeById(id) {
     return null;
   }
 }
+
