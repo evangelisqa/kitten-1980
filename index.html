@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recipe Roulette</title>
     <link rel="stylesheet" href="/styles/style.css" />
     <audio id="spin-sound" src="/sounds/spin.mp3" preload="auto"></audio>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/public/favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
@@ -41,7 +40,7 @@
         <form id="add-ingredient-form">
             <label for="ingredient-input" class="sr-only">Ingredient Name</label>
             <input type="text" id="ingredient-input" placeholder="e.g., tomato" required />
-            <button type="submit">Add</button>
+            <button type="submit" id="addIngredientBtn">Add</button>
         </form>
         <ul id="ingredient-list"></ul>
         <button id="clear-ingredients">Clear Ingredients</button>
@@ -92,19 +91,18 @@
     <!-- Recipe Roulette Section -->
     <section id="roulette-section" style="text-align: center; margin: 2rem auto;">
         <button id="spin-recipe-btn" class="roulette-btn">🎰 Spin for a Recipe!</button>
-        <p id="spin-message" aria-live="polite" role="status" style="color: red; font-weight: bold; margin-top: 1rem;">
-        </p>
+        <p id="spin-message" aria-live="polite" role="status" style="color: red; font-weight: bold; margin-top: 1rem;"></p>
         <div id="spinner-wrapper" style="position: relative; width: 180px; margin: 2rem auto;">
             <div id="pointer" style="
-        position: absolute;
-        top: -20px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 0;
-        height: 0;
-        border-left: 15px solid transparent;
-        border-right: 15px solid transparent;
-        border-bottom: 20px solid var(--primary);">
+              position: absolute;
+              top: -20px;
+              left: 50%;
+              transform: translateX(-50%);
+              width: 0;
+              height: 0;
+              border-left: 15px solid transparent;
+              border-right: 15px solid transparent;
+              border-bottom: 20px solid var(--primary);">
             </div>
             <div id="spinner" class="spinner-wheel"></div>
         </div>
@@ -116,14 +114,14 @@
     <footer>
         <p>
             &copy; 2025 Recipe Roulette | Evangelis Albesa
-            
+
             <a href="#">About</a> |
             <a href="#">Contact</a>
         </p>
     </footer>
 
-    <script type="module" src="/scripts/main.js"></script>
-    <script type="module" src="/scripts/navigation.js"></script>
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/navigation.js"></script>
 
 </body>
 
