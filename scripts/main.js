@@ -1,4 +1,4 @@
-console.log("main.ks is running");
+console.log("main.js is running");
 
 import { searchRecipesByIngredients } from "./api/spoonacular.mjs";
 import { searchEdamamRecipes } from "./api/edamam.mjs";
