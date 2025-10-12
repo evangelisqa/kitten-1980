@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import { resolve } from 'path'
 
 export default defineConfig({
-  base: './kitten-1980/',
+  base: '/',
   build: {
     rollupOptions: {
       input: {
@@ -13,4 +13,4 @@ export default defineConfig({
       }
     }
   }
-})
+});
