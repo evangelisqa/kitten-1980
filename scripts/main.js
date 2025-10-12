@@ -1,3 +1,5 @@
+console.log("main.ks is running");
+
 import { searchRecipesByIngredients } from "./api/spoonacular.mjs";
 import { searchEdamamRecipes } from "./api/edamam.mjs";
 import { searchYouTubeVideos } from "./api/youtube.mjs";
