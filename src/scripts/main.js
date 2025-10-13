@@ -1,4 +1,4 @@
-consolelog("Spoonacular Key", import.meta.env.VITE_SPOONACULAR_KEY);
+consolelog("SPOONACULAR_KEY", import.meta.env.VITE_SPOONACULAR_KEY);
 
 import { searchRecipesByIngredients } from "./api/spoonacular.mjs";
 import { searchEdamamRecipes } from "./api/edamam.mjs";
