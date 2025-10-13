@@ -1,3 +1,5 @@
+consolelog("Spoonacular Key", import.meta.env.VITE_SPOONACULAR_KEY);
+
 import { searchRecipesByIngredients } from "./api/spoonacular.mjs";
 import { searchEdamamRecipes } from "./api/edamam.mjs";
 import { searchYouTubeVideos } from "./api/youtube.mjs";
@@ -227,3 +229,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
   setupRecipeRoulette();
 });
+
+let spoonacularKey = import.meta.env.VITE_SPOONACULAR_KEY;
+if (!spoonacularKey) {
+  console.warn("Spoonacular key is missing. Search will not work.");
+  setupRecipeRoulette = "";
+}
