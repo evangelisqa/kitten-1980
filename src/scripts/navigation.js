@@ -1,3 +1,4 @@
+import Navigation from './navigation.js';
 document.addEventListener("DOMContentLoaded", () => {
   const menuButton = document.getElementById("hamburger-menu");
   const nav = document.getElementById("animateme");
